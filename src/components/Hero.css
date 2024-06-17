@@ -1,0 +1,100 @@
+/*  */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    margin-top: 50px;
+    background: #f9f7f7; /* Light gray background */
+    height: 80vh;
+    color: #333; /* Dark text color for better contrast */
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: slideInLeft 1.5s ease-in-out, colorChange 5s infinite alternate;
+}
+
+.hero-text {
+    font-size: 20px;
+    line-height: 1.6;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+.hero-text span {
+    font-weight: bold;
+    font-style: italic;
+    animation: colorChange 5s infinite alternate;
+}
+
+.hero-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+.hero-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ff5252; /* Red */
+    }
+    25% {
+        color: #4caf50; /* Green */
+    }
+    50% {
+        color: #2196f3; /* Blue */
+    }
+    75% {
+        color: #ff9800; /* Orange */
+    }
+    100% {
+        color: #9c27b0; /* Purple */
+    }
+}
+

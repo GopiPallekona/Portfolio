@@ -1,0 +1,187 @@
+.projects-section {
+    padding: 50px;
+    margin-top: 50px;
+    background: linear-gradient(135deg, #f06, #f79);
+    color: #fff;
+    text-align: center;
+    animation: backgroundAnimation 10s ease infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+.project-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffcc00;
+    animation: textAnimation 5s ease-in-out infinite alternate;
+}
+
+.project-description {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.project-link {
+    font-size: 18px;
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #fff;
+}
+
+.project-card button {
+    background-color: #ffcc00; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+    outline: none;
+}
+
+.project-card button:hover {
+    background-color: #ff9800; /* Hover background color */
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Slider modal styles */
+.slider-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.slider-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #f06;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.slide-image {
+    width: 100%;
+    border-radius: 10px;
+    height: 450px;
+}
+.footer{
+    margin-top: 30px;
+    background-color: #9c27b0;
+    border-radius: 10px;
+}
+.footer h3{
+    color: #fff;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer a{
+    color: #fff;
+    font-size: 40px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes textAnimation {
+    0% {
+        color: #ff5252; /* Red */
+    }
+    25% {
+        color: #4caf50; /* Green */
+    }
+    50% {
+        color: #2196f3; /* Blue */
+    }
+    75% {
+        color: #ff9800; /* Orange */
+    }
+    100% {
+        color: #9c27b0; /* Purple */
+    }
+}

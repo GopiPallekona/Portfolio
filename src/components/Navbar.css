@@ -1,0 +1,67 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2196f3; /* Blue background color */
+    padding: 10px 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 95vw;
+}
+
+.logo {
+    color: #fff; /* White text color */
+    font-size: 24px;
+    font-weight: bold;
+}
+.logo img{
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff; /* White text color */
+    font-size: 18px;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffc107; /* Yellow hover color */
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Optional: Animation for underline effect */
+.nav-links li a::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #ffc107; /* Yellow color */
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::before {
+    width: 100%;
+}
